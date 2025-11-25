@@ -1,0 +1,137 @@
+/* ===== Global Reset ===== */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+
+/* ===== Background ===== */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0d0012; /* darkest purple */
+    color: #fff;
+}
+
+/* ===== Header ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #c28aff, #9b6bff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 12px rgba(160,100,255,0.5);
+}
+
+.logout-btn {
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(150,90,255,0.25);
+    color: #efe6ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: rgba(0,255,100,0.28);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(0,255,100,0.7);
+    transform: translateY(-3px);
+}
+
+/* ===== Form Grid ===== */
+.form-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* ===== Card / Form Container ===== */
+.card {
+    width: 400px;
+    padding: 40px 30px;
+    text-align: center;
+    background: rgba(20,20,30,0.6);
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* ===== Input Groups ===== */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c28aff;
+    font-size: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    border-radius: 12px;
+    border: 1px solid rgba(180,120,255,0.35);
+    background: rgba(255,255,255,0.08);
+    color: #e6d9ff;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    outline: none;
+    transition: 0.25s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: rgba(170,110,255,0.8);
+    box-shadow: 0 0 10px rgba(170,110,255,0.6);
+    background: rgba(255,255,255,0.15);
+}
+
+/* ===== Submit Button ===== */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 10px;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: rgba(150,90,255,0.25); /* purple default */
+    color: #efe6ff;
+    border: 1px solid rgba(180,120,255,0.45);
+    cursor: pointer;
+    transition: 0.25s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background: rgba(0,255,100,0.28); /* green hover */
+    border-color: rgba(0,255,100,0.7);
+    box-shadow:
+        0 0 12px rgba(0,255,100,0.7),
+        0 0 20px rgba(0,255,100,0.5);
+    transform: translateY(-3px);
+}
+
+/* ===== Success Message ===== */
+.success {
+    color: #00ff64;
+    margin-top: 15px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}

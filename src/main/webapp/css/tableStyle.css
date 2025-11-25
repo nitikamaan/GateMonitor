@@ -1,0 +1,187 @@
+/* ===== Body ===== */
+body {
+    background: #0d0012; /* darkest purple */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px;
+}
+
+/* ===== Page Headings ===== */
+h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: transparent;
+    background: linear-gradient(90deg, #c28aff, #9b6bff);
+    -webkit-background-clip: text;
+    text-shadow: 0 0 12px rgba(160,100,255,0.5), 0 0 20px rgba(160,100,255,0.3);
+}
+
+/* ===== Table Container ===== */
+table {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    background: rgba(20,20,30,0.6);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* ===== Table Header ===== */
+th {
+    background: rgba(150,90,255,0.25);
+    color: #efe6ff;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px;
+    text-align: center;
+}
+
+/* ===== Table Rows ===== */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 15px;
+    color: #e6d9ff;
+}
+
+/* ===== Row Hover ===== */
+tr:hover {
+    background: rgba(0,255,100,0.15);
+    color: #fff;
+}
+
+/* ===== Action Links ===== */
+td a {
+    color: #c28aff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s ease-in-out;
+}
+
+td a:hover {
+    color: #00ff64;
+    text-shadow: 0 0 6px rgba(0,255,100,0.7);
+}
+
+/* ===== Responsive Table ===== */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    th::before, td::before {
+        position: absolute;
+        left: 15px;
+        font-weight: 700;
+        color: #c28aff;
+    }
+
+    /* Guards Table Header Labels */
+    th:nth-of-type(1)::before { content: "ID"; }
+    th:nth-of-type(2)::before { content: "Name"; }
+    th:nth-of-type(3)::before { content: "Username / Phone"; }
+    th:nth-of-type(4)::before { content: "Status / Student"; }
+    th:nth-of-type(5)::before { content: "Actions / Room"; }
+    th:nth-of-type(6)::before { content: "Entry Time"; }
+    th:nth-of-type(7)::before { content: "Exit Time"; }
+    th:nth-of-type(8)::before { content: "Action"; }
+}
+
+/* ===== Header Bar ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(30, 10, 50, 0.9);
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(160, 100, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #c28aff;
+}
+
+/* ===== Logout / Back Button ===== */
+.logout-btn {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    background: #c28aff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.logout-btn i {
+    margin-left: 8px;
+}
+
+.logout-btn:hover {
+    background: #00ff64;
+    color: #000;
+    box-shadow: 0 0 10px #00ff64;
+}
+
+/* ===== Search / Dashboard Forms ===== */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    width: 400px;
+    margin: 0 auto 40px auto;
+    padding: 25px;
+    background: rgba(20, 10, 40, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(160,100,255,0.4);
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="submit"] {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+form input[type="text"],
+form input[type="date"] {
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+}
+
+form input[type="text"]:focus,
+form input[type="date"]:focus {
+    background: rgba(255,255,255,0.15);
+    outline: none;
+    box-shadow: 0 0 8px #c28aff;
+}
+
+form input[type="submit"] {
+    background: #c28aff;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background: #00ff64;
+    color: #000;
+    box-shadow: 0 0 10px #00ff64;
+}

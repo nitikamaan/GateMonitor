@@ -1,0 +1,169 @@
+/* ===== Body ===== */
+body {
+    margin: 0;
+    padding: 20px 40px;
+    font-family: 'Poppins', sans-serif;
+    background: #0d0018; /* darker purple */
+    color: #fff;
+}
+
+/* ===== Top Navbar ===== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.top-bar h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #c28aff;
+}
+
+.back-btn {
+    text-decoration: none;
+    background: #c28aff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.back-btn i {
+    margin-right: 6px;
+}
+
+.back-btn:hover {
+    background: #00ff64;
+    color: #000;
+    box-shadow: 0 0 15px #00ff64;
+}
+
+/* ===== Container Flex Layout ===== */
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ===== Table Box ===== */
+.table-box {
+    flex: 2;
+    min-width: 300px;
+}
+
+.table-box table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(20, 10, 30, 0.6); /* semi-transparent dark purple */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(160,100,255,0.4);
+}
+
+.table-box th {
+    background: rgba(150,90,255,0.25);
+    padding: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #efe6ff;
+}
+
+.table-box td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #e6d9ff;
+}
+
+.table-box tr:hover {
+    background: rgba(0,255,100,0.12);
+}
+
+/* ===== Search Form App-Style ===== */
+.search-box {
+    flex: 1;
+    min-width: 220px; /* slightly smaller form */
+    background: rgba(30,10,50,0.95); /* dark purple card */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(160,100,255,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.search-box h3 {
+    color: #c28aff;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+
+}
+
+/* Input Group with Icons */
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c28aff;
+    font-size: 16px;
+    text-shadow: 0 0 6px #c28aff;
+}
+
+.search-box input[type="text"],
+.search-box input[type="date"] {
+    width: 90%;
+    padding: 10px 12px 10px 36px; /* smaller height */
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.search-box input[type="text"]:focus,
+.search-box input[type="date"]:focus {
+    outline: none;
+    box-shadow: 0 0 12px #00ff64;
+    border: 1px solid #00ff64;
+}
+
+/* Submit Button */
+.search-box button {
+    width: 100%; /* slightly longer */
+    background: #c28aff;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-box button:hover {
+    background: #00ff64;
+    color: #000;
+    box-shadow: 0 0 15px #00ff64;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+    .container {
+        flex-direction: column;
+    }
+
+    .table-box, .search-box {
+        width: 100%;
+    }
+}

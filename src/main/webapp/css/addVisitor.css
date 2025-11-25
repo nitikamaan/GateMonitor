@@ -1,0 +1,168 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===== Background ===== */
+body {
+    min-height: 100vh;
+    background: #0d0012;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    color: #fff;
+}
+
+/* ===== Header Bar ===== */
+.header {
+    width: 90%;
+    max-width: 900px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(20, 20, 35, 0.6);
+    padding: 18px 25px;
+    border-radius: 14px;
+
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 0 18px rgba(160, 100, 255, 0.4);
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    background: linear-gradient(90deg, #c28aff, #9b6bff);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.back-btn {
+    color: #e9d8ff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 8px 16px;
+    border-radius: 10px;
+    background: rgba(150, 90, 255, 0.3);
+
+    transition: 0.3s ease-in-out;
+    border: 1px solid rgba(180,120,255,0.4);
+}
+
+.back-btn:hover {
+    background: rgba(0, 255, 100, 0.25);
+    border-color: rgba(0,255,100,0.6);
+    box-shadow: 0 0 12px rgba(0,255,100,0.5);
+    color: #000;
+}
+
+/* ===== Form Card ===== */
+.card {
+    width: 420px;
+    padding: 40px 35px;
+
+    background: rgba(20, 20, 30, 0.6);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    box-shadow:
+        0 0 20px rgba(0,0,0,0.6),
+        inset 0 0 30px rgba(255,255,255,0.05);
+
+    animation: floatUp 1s ease-out;
+}
+
+/* ===== Input Groups ===== */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c28aff;
+    font-size: 18px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+
+    background: rgba(255,255,255,0.07);
+    border-radius: 12px;
+
+    border: 1px solid rgba(180,120,255,0.3);
+    color: #e6d9ff;
+    font-size: 16px;
+    outline: none;
+
+    transition: 0.25s;
+}
+
+.input-group input:focus {
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 0 10px rgba(170, 110, 255, 0.5);
+    border-color: rgba(170, 110, 255, 0.8);
+}
+
+/* ===== Submit Button ===== */
+input[type="submit"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: rgba(150,90,255,0.25);
+    color: #efe6ff;
+
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    border: 1px solid rgba(180,120,255,0.4);
+}
+
+input[type="submit"]:hover {
+    background: rgba(0,255,100,0.28);
+    border-color: rgba(0,255,100,0.7);
+
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 18px rgba(0, 255, 100, 0.6),
+        0 0 28px rgba(0, 255, 100, 0.3);
+}
+
+/* ===== Success Message ===== */
+.success {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #00ff80;
+    text-align: center;
+}
+
+/* ===== Animations ===== */
+@keyframes floatUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

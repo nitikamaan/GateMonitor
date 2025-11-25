@@ -1,0 +1,126 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* ===== Background ===== */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Deep cyber gradient */
+    background: radial-gradient(circle at top, #0b0f17, #05070b 60%);
+    color: #fff;
+    overflow: hidden;
+}
+
+
+/* ===== Subtle glowing particles ===== */
+body::before {
+    content: "";
+    position: absolute;
+    width: 180%;
+    height: 180%;
+    background: url('https://i.imgur.com/ZvWTUVL.png'); /* soft noise png */
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+/* ===== Card ===== */
+.card {
+    width: 400px;
+    padding: 45px 35px;
+    text-align: center;
+
+    /* Glass with dark tint */
+    background: rgba(20, 20, 30, 0.6);
+    border-radius: 18px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    /* 3-layer glow shadow */
+    box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.7),
+        0 0 40px rgba(0, 0, 0, 0.5),
+        inset 0 0 30px rgba(255, 255, 255, 0.05);
+
+    animation: floatUp 1.2s ease-out, softGlow 3s ease-in-out infinite alternate;
+}
+
+.card h2 {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #b388ff, #8c5bff, #d3a9ff);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    text-shadow:
+        0 0 8px rgba(170, 120, 255, 0.6),
+        0 0 14px rgba(170, 120, 255, 0.5);
+
+    animation: headingPop 1.4s ease-out;
+}
+
+/* Default Purple Button */
+.btn {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+
+    margin-bottom: 22px;
+
+    background: rgba(150, 90, 255, 0.25);   /* purple background */
+    color: #efe6ff;
+    border: 1px solid rgba(180, 120, 255, 0.45);   /* purple border */
+
+    transition: 0.25s ease-in-out;
+}
+
+/* Green Glow Hover */
+.btn:hover {
+    background: rgba(0, 255, 100, 0.28);   /* green hover */
+    transform: translateY(-4px);
+    border-color: rgba(0, 255, 100, 0.7);
+
+    box-shadow:
+        0 0 12px rgba(0, 255, 100, 0.7),
+        0 0 20px rgba(0, 255, 100, 0.5),
+        0 0 30px rgba(0, 255, 100, 0.3);
+}
+
+/* ===== Animations ===== */
+@keyframes floatUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes softGlow {
+    0%   { box-shadow: 0 0 20px rgba(120, 120, 255, 0.1); }
+    100% { box-shadow: 0 0 28px rgba(120, 120, 255, 0.25); }
+}
+
+@keyframes headingPop {
+    0%   { opacity: 0; transform: translateY(-15px) scale(0.95); }
+    60%  { opacity: 1; transform: translateY(0px) scale(1.03); }
+    100% { transform: scale(1); }
+}
+
