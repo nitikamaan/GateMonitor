@@ -27,7 +27,7 @@ The UI is designed with a modern dark neon app-style interface.
 -Room number
 -Phone number
 
-📋 Admin Module (Optional)
+📋 Admin Module
 
 -Manage guards
 
@@ -62,4 +62,4 @@ The UI is designed with a modern dark neon app-style interface.
 
 -Server	Apache Tomcat
 
--Tools	IntelliJ IDEA / Eclipse
+-Tools	IntelliJ IDEA 
